@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="myFunction.js" defer></script>
+</head>
+<body>
+    <div id="demo">hi this is example code</div>
+    <button type="button" onclick="myfunc()">click here</button>
+
+   <button type="button" onclick="window.alert(5 + 6)">click</button>
+
+   <p id="temp2"></p>
+   <div id="temp1"></div>
+   <script>
+
+    // let x = 5;
+    // document.getElementById("temp2").innerHTML = x
+    // const cars = [volvo, suv, thar];
+
+    // const Person = {name:"Mohit", age:20, eyecolor:"black"};
+    // document.getElementById("temp2").innerHTML = Person.name + "is " + Person.age + "years old."
+
+    // let x = 3;
+    // x += 4
+    // document.getElementById('temp2').innerHTML = x;
+
+
+
+    // let result = myfunction(2, 5);
+    // document.getElementById('temp2').innerHTML = result
+
+    // function myfunction(a, b)
+    // {
+    //     return a * b;
+    // }
+
+    // let text = "outside" + typeof carName;
+    // document.getElementById('temp2').innerHTML = text;
+
+    // function inside()
+    // {
+    //     let carName = "volvo";
+    //     document.getElementById('temp1').innerHTML = carName + typeof carName;
+    // }
+
+    // inside();
+
+    const Person = {name:"anil", Lastname:"shah", age:"20"};
+    let text = "";
+
+    for(let [person, value] of Object.entries(Person))
+   {
+        text += person + " " + value + "<br>";
+   }
+    
+// Display the Text
+document.getElementById("temp1").innerHTML = text;
+    </script>
+
+    
+</body>
+</html>

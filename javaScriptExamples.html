@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function myFunction() {
+        document.getElementById("temp-3").innerHTML = "it's changed";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="temp-3">not changed</div>
+    <button type="button" onclick="myFunction()">click here</button>
+    <button
+      type="button"
+      onclick="document.getElementById('demo').innerHTML = Date()"
+    >
+      Click me for date and time
+    </button>
+
+    <p id="demo"></p>
+
+    <button
+      type="button"
+      onclick="document.getElementById('myImage').src = 'img1.jpg'"
+    >
+      Turn on light
+    </button>
+    <img id="myImage" src="img1.jpg" />
+    <button type="button" onclick="document.getElementById('myImage').src = ''">
+      Turn off light
+    </button>
+
+    <div id="temp1">HI this is example text</div>
+    <button
+      type="button"
+      onclick="document.getElementById('temp1').style.fontSize = '100px'"
+    >
+      click me
+    </button>
+
+    <div id="temp2" style="display: none">this one is example 2</div>
+    <button
+      type="button"
+      onclick="document.getElementById('temp2').style.display='none'"
+    >
+      click to hide
+    </button>
+    <button
+      type="button"
+      onclick="document.getElementById('temp2').style.display='block'"
+    >
+      click to show
+    </button>
+
+    <script>
+      document.getElementById("temp2").innerHTML = "Hope this works!";
+    </script>
+  </body>
+</html>
