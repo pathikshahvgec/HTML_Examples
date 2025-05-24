@@ -1,0 +1,18 @@
+<p id = "countdown">5</p>
+<button onclick="startCountDown()">Start</button>
+
+<script>
+    function startCountDown()
+    {
+        let count = 5;
+        const timer = setInterval(() => {
+            count--;
+            document.getElementById('countdown').innerHTML = count;
+            if(count == 0)
+            {
+                clearInterval(timer);
+                alert("Time's up!");
+            }
+        }, 1000)
+    }
+</script>

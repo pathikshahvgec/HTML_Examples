@@ -41,16 +41,13 @@
       </div>
     </div>
 
-         <input type="text" id="nameIp" placeholder="Enter your name">
-     <button onclick="sayhello()">SayHello</button>
-     <button onclick="toggleBg()">Toggle Background</button>
-     <input type="text" id="itemIp" placeholder="Enter item">
-     <button onclick="addItem()">Add</button>
-     <ul id="itemList"></ul>
+      <h2 id="count"></h2>
+      <button onclick="increase()">+</button>
+      <button onclick="decrease()">-</button>
 
-     <h2 id="count">0</h2>
-     <button onclick="increase()">+</button>
-     <button onclick="decrease()">-</button>
+      <input type="text" id="nameInput" placeholder="Enter your name">
+      <button onclick="addToList()">Add to List</button>
+      <div id="taskList"></div>
 
     <script>
           function handleClick() {
@@ -90,46 +87,25 @@
         });
       }
 
-      const fruits = ["Apple", "Banana", "Cherry"]
-     fruits.forEach(function(fruit)
-     {
-        console.log(fruit)
-        
-     });
-     function sayhello()
-     {
-        const name = document.getElementById('nameIp').value;
-        alert("Hello, " + name)
-     }
-
-     let isBlue = false
-     function toggleBg()
-     {
-            document.body.style.backgroundColor = isBlue?"white":"lightblue";
-            isBlue = !isBlue;
-     }
-
-     function addItem()
-     {
-        const item = document.getElementById("itemIp").value;
-        const li = document.createElement("li");
-        li.innerText = item;
-        document.getElementById("itemList").appendChild(li);
-        document.getElementById("itemIp").value = "";
-     }
-
-     let counter = 0
-     function increase()
-     {
+      let counter = 0
+      function increase()
+      {
         counter++;
-        document.getElementById('count').innerText = counter;
-     }
+        document.getElementById('count').innerHTML = counter;
+      }
 
-     function decrease()
-     {
+      function decrease()
+      {
         counter--;
-        document.getElementById('count').innerText = counter;
-     }
+        document.getElementById('count').innerHTML = counter;
+      }
+
+      function addToList()
+      {
+        let task = document.getElementById("nameInput").innerHTML;
+        console.log(task);
+      }
+
     </script>
   </body>
 </html>
