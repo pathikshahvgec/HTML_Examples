@@ -1,0 +1,12 @@
+<label><input type="checkbox" onclick="toggleAll(this)">Select All</label><br>
+<label><input type="checkbox" class="item">Task-1</label><br>
+<label><input type="checkbox" class="item">Task-2</label><br>
+<label><input type="checkbox" class="item">Task-3</label><br>
+
+<script>
+    function toggleAll(source)
+    {
+        const checkboxes = document.querySelectorAll(".item");
+        checkboxes.forEach(cb => cb.checked = source.checked);
+    }
+</script>
